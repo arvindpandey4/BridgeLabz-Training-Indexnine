@@ -1,5 +1,5 @@
 {
-  "name": "Employee_Wage",
+  "name": "employee-wage",
   "version": "1.0.0",
   "description": "Employee wage calculation project",
   "main": "script.js",
