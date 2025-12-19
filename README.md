@@ -1,13 +1,26 @@
-# Branching Strategy
+# BridgeLabz Training - Express.js
 
-This repository uses the dev branch as the main development branch. All feature branches are created from dev.
+This branch contains a basic setup of a generic Node.js application using the Express.js framework.
 
-The following branches originated from dev:
-- feature/advance_js_oops
-- feature/core_js
-- feature/express_js
-- feature/js_dsa
-- feature/nodejs
-- feature/typescript
+## Project Structure
+The application follows a standard modular structure in the `src` directory:
 
-The master branch is used specifically for daily updates.
+- **src/server.js**: Entry point that starts the server on port 3000.
+- **src/app.js**: Initializes the Express application, configures middleware (JSON parsing), and sets up routes and error handling.
+- **src/controllers/controller.js**: Logic for route handlers.
+- **src/routes/index.js**: Definition of API routes.
+- **src/middlewares/error.middleware.js**: Global error handling middleware.
+
+## API Endpoints
+
+### GET /
+Returns a simple greeting message.
+- **Response**: `hello from the server`
+
+### POST /data
+Receives JSON data and echoes it back.
+- **Body**: JSON object
+- **Response**: JSON object containing the received data.
+
+## Status
+Done
