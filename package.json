@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-practice",
+  "version": "1.0.0",
+  "description": "Complete Node.js, JavaScript fundamentals, and OOP practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": ["nodejs", "javascript", "oop", "event-loop", "closures"],
+  "author": "BridgeLabz",
+  "license": "ISC"
+}
