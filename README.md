@@ -2,6 +2,10 @@
 
 ## Progress Overview
 
+### December 19, 2025
+
+Completed the express js fundamentals and building fundoo notes application based on it.
+
 ### December 13, 2025
 
 Typescript Review Done
@@ -111,7 +115,7 @@ Type-safe JavaScript development:
 | feature/nodejs | Node.js & Async | Completed |
 | feature/js_dsa | JavaScript DSA | Completed |
 | feature/typescript | TypeScript | Completed |
-| feature/express_js | Express.js | In Progress |
+| feature/express_js | Express.js | Completed |
 
 ---
 
@@ -126,5 +130,5 @@ Type-safe JavaScript development:
 
 ---
 
-**Last Updated:** December 13, 2025  
+**Last Updated:** December 19, 2025  
 **Repository:** arvindpandey4/BridgeLabz-Training-Indexnine
