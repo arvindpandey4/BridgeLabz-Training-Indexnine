@@ -2,6 +2,10 @@
 
 ## Progress Overview
 
+### December 22, 2025
+
+Completed the express js fundamentals and building fundoo notes application based on it. Completed Review. Starting with ML basics.
+
 ### December 19, 2025
 
 Completed the express js fundamentals and building fundoo notes application based on it.
