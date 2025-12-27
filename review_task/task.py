@@ -1,3 +1,14 @@
+# Problem
+
+# Write a function validate_logs(logs) where logs is a list of strings.
+
+# Rules
+# 1. Each log line: "LEVEL: message"
+# 2. Valid LEVELS: INFO, WARNING, ERROR
+# 3. No two ERROR logs should occur consecutively
+# 4. Return True if logs are valid else False.
+
+
 def validate_logs(logs):
     valid_levels = ["INFO", "WARNING", "ERROR"]
     prev_level = None
