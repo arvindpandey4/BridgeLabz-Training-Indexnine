@@ -1,138 +1,86 @@
-# BridgeLabz Training - Daily Update
+# Review Task - Log Validation
 
-## Progress Overview
+## Overview
+This project implements a log validation system that checks the validity of log entries based on specific rules.
 
-### December 22, 2025
+## Problem Statement
+Write a function `validate_logs(logs)` where `logs` is a list of strings representing log entries.
 
-Completed the express js fundamentals and building fundoo notes application based on it. Completed Review. Starting with ML basics.
+### Rules
+1. Each log line must follow the format: `"LEVEL: message"`
+2. Valid log levels are: `INFO`, `WARNING`, `ERROR`
+3. No two `ERROR` logs should occur consecutively
+4. Return `True` if all logs are valid, otherwise return `False`
 
-### December 19, 2025
+## Files
 
-Completed the express js fundamentals and building fundoo notes application based on it.
+### `task.py`
+Contains the main `validate_logs()` function that validates log entries according to the rules.
 
-### December 13, 2025
+**Function Signature:**
+```python
+def validate_logs(logs: list) -> bool
+```
 
-Typescript Review Done
+**Parameters:**
+- `logs` (list): A list of log strings in the format "LEVEL: message"
 
----
+**Returns:**
+- `bool`: `True` if all logs are valid, `False` otherwise
 
-## Core JavaScript (feature/core_js)
+### `logs.py`
+Contains comprehensive test cases to verify the `validate_logs()` function works correctly.
 
-Covered fundamental JavaScript concepts:
-- Variables and scope (var, let, const)
-- Data types and type conversions
-- Operators and expressions
-- Control flow (if/else, loops, switch)
-- Functions and arrow functions
-- Arrays and array methods
-- Objects and object methods
-- String methods and manipulation
-- Error handling and try/catch
+## Test Cases
 
----
+The test suite includes 6 different scenarios:
 
-## Advanced JavaScript & OOP (feature/advance_js_oops)
+1. **Normal logs** - Mix of INFO, WARNING, and ERROR logs
+2. **Two ERRORs in a row** - Should fail validation
+3. **ERRORs with other logs between them** - Should pass validation
+4. **Invalid log level** - Contains DEBUG (invalid level)
+5. **All INFO logs** - Should pass validation
+6. **Three ERRORs in a row** - Should fail validation
 
-Deep dive into advanced patterns:
-- Constructor functions and prototypes
-- ES6 Classes and inheritance
-- Prototype chain
-- this binding and context
-- Closures and scope chain
-- Higher-order functions
-- Callbacks and callback hell
-- Promises and Promise chaining
-- Async/await
-- Event emitters
-- Object methods: call, apply, bind
-- Decorators and forwarding
-- Custom error handling
+## Usage
 
----
+Run the test suite:
+```bash
+python logs.py
+```
 
-## Node.js Fundamentals (feature/nodejs)
+## Example
 
-Complete Node.js and async JavaScript practice:
-- Event Loop and async model
-- Promises and async/await
-- Scheduling with setTimeout/setInterval
-- Type conversions and comparisons
-- Nullish coalescing operator
-- Rest parameters and spread syntax
-- IIFE (Immediately Invoked Function Expressions)
-- NFE (Named Function Expressions)
-- Function binding
-- Currying and memoization
-- Custom event emitters
-- Proxy pattern
+```python
+from task import validate_logs
 
-Files:
-- 01_fundamentals.js - Core concepts
-- 02_functions_advanced.js - Advanced functions
-- 03_event_loop_oop.js - Event loop and OOP
-- 04_practice_examples.js - Real-world examples
+# Valid logs
+logs = [
+    "INFO: Server started",
+    "WARNING: Low memory",
+    "ERROR: Connection failed"
+]
+print(validate_logs(logs))  # Output: True
 
----
+# Invalid logs (consecutive ERRORs)
+logs = [
+    "INFO: Server started",
+    "ERROR: Connection failed",
+    "ERROR: Timeout"
+]
+print(validate_logs(logs))  # Output: False
+```
 
-## JavaScript DSA (feature/js_dsa)
+## Implementation Details
 
-Data Structures and Algorithms in JavaScript:
+The function validates logs by:
+1. Splitting each log entry by `:` to extract the level
+2. Checking if the level is in the valid levels list
+3. Tracking the previous log level to detect consecutive ERRORs
+4. Returning `False` immediately if any validation rule is violated
 
-Searching:
-- Linear search
-- Binary search
+## Requirements
+- Python 3.x
 
-Sorting:
-- Bubble sort
-- Selection sort
-- Insertion sort
-- Merge sort
-- Quick sort
-
-Data Structures:
-- Array basics and operations
-- Linked lists
-
----
-
-## TypeScript (feature/typescript)
-
-Type-safe JavaScript development:
-- TypeScript basics and setup
-- Type annotations
-- Interfaces and types
-- Classes with TypeScript
-- Generics
-- Enums
-- Union and intersection types
-- Type guards
-- Module system
-
----
-
-## Branches Overview
-
-| Branch | Topic | Status |
-|--------|-------|--------|
-| feature/core_js | Core JavaScript | Completed |
-| feature/advance_js_oops | Advanced JS & OOP | Completed |
-| feature/nodejs | Node.js & Async | Completed |
-| feature/js_dsa | JavaScript DSA | Completed |
-| feature/typescript | TypeScript | Completed |
-| feature/express_js | Express.js | Completed |
-
----
-
-## Key Learnings
-
-1. Master JavaScript fundamentals before moving to advanced concepts
-2. Understanding closures is crucial for async programming
-3. Event loop and microtasks/macrotasks are essential for async patterns
-4. OOP patterns vary: constructor functions, classes, and prototypes
-5. DSA implementation helps understand algorithm complexity
-6. TypeScript adds type safety and better development experience
-
----
-
-**Last Updated:** December 19, 2025  
-**Repository:** arvindpandey4/BridgeLabz-Training-Indexnine
+## Author
+Arvind Pandey
