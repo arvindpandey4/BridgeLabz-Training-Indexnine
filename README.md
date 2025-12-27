@@ -2,6 +2,10 @@
 
 ## Progress Overview
 
+### December 27, 2025
+
+Completed AI/ML Review Task 1 - Log Validation System. Implemented a Python function to validate log entries based on specific rules including log level validation and consecutive error detection.
+
 ### December 22, 2025
 
 Completed the express js fundamentals and building fundoo notes application based on it. Completed Review. Starting with ML basics.
@@ -110,6 +114,33 @@ Type-safe JavaScript development:
 
 ---
 
+## AI/ML Review Tasks (feature/ai_ml)
+
+### Review Task 1: Log Validation System
+
+Implemented a log validation system in Python that validates log entries based on specific rules:
+
+**Problem:** Create a function `validate_logs(logs)` that validates a list of log strings.
+
+**Rules:**
+- Each log must follow format: `"LEVEL: message"`
+- Valid levels: INFO, WARNING, ERROR
+- No two ERROR logs can occur consecutively
+- Returns True if valid, False otherwise
+
+**Implementation:**
+- `task.py` - Core validation logic
+- `logs.py` - Comprehensive test suite with 6 test cases
+- `README.md` - Documentation and usage examples
+
+**Key Concepts:**
+- String parsing and validation
+- State tracking (previous log level)
+- Edge case handling
+- Test-driven development
+
+---
+
 ## Branches Overview
 
 | Branch | Topic | Status |
@@ -120,6 +151,7 @@ Type-safe JavaScript development:
 | feature/js_dsa | JavaScript DSA | Completed |
 | feature/typescript | TypeScript | Completed |
 | feature/express_js | Express.js | Completed |
+| feature/ai_ml | AI/ML Review Tasks | In Progress |
 
 ---
 
@@ -134,5 +166,5 @@ Type-safe JavaScript development:
 
 ---
 
-**Last Updated:** December 19, 2025  
+**Last Updated:** December 27, 2025  
 **Repository:** arvindpandey4/BridgeLabz-Training-Indexnine
