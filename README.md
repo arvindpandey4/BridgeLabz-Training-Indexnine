@@ -2,6 +2,10 @@
 
 ## Progress Overview
 
+### December 29, 2025
+
+Completed Advanced Backend topics (Redis, RabbitMQ, ESLint, Swagger). Started practicing React.js frontend concepts on a new branch.
+
 ### December 27, 2025
 
 Completed AI/ML Review Task 1 - Log Validation System. Implemented a Python function to validate log entries based on specific rules including log level validation and consecutive error detection.
@@ -141,6 +145,28 @@ Implemented a log validation system in Python that validates log entries based o
 
 ---
 
+---
+
+## Advanced Backend
+
+Implemented advanced backend features:
+- **Redis**: Caching implementation for improved performance (20 notes/user)
+- **RabbitMQ**: Message queuing for asynchronous email notifications
+- **ESLint**: Code quality and linting configuration
+- **Swagger**: API documentation
+
+---
+
+## React.js (feature/react_js)
+
+Practicing React.js frontend concepts:
+- Component structure and lifecycle
+- State management
+- Hooks implementation
+- Frontend architecture
+
+---
+
 ## Branches Overview
 
 | Branch | Topic | Status |
@@ -151,7 +177,8 @@ Implemented a log validation system in Python that validates log entries based o
 | feature/js_dsa | JavaScript DSA | Completed |
 | feature/typescript | TypeScript | Completed |
 | feature/express_js | Express.js | Completed |
-| feature/ai_ml | AI/ML Review Tasks | In Progress |
+| feature/ai_ml | AI/ML Review Tasks | Completed |
+| feature/react_js | React.js Frontend | In Progress |
 
 ---
 
@@ -166,5 +193,5 @@ Implemented a log validation system in Python that validates log entries based o
 
 ---
 
-**Last Updated:** December 27, 2025  
+**Last Updated:** December 29, 2025  
 **Repository:** arvindpandey4/BridgeLabz-Training-Indexnine
