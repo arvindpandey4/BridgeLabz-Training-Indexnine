@@ -2,6 +2,12 @@
 
 ## Progress Overview
 
+### January 06, 2026
+
+Major updates on AI/ML and Frontend fronts:
+- **AI/ML**: Completed HDFC Data Analysis and ResNet50 Image Classification tasks. Integrated Gemini API for prompt engineering application.
+- **React.js**: Deep dive into Hooks, Context API, and component design patterns. Created comprehensive practice templates.
+
 ### December 29, 2025
 
 Completed Advanced Backend topics (Redis, RabbitMQ, ESLint, Swagger). Started practicing React.js frontend concepts on a new branch.
@@ -143,6 +149,30 @@ Implemented a log validation system in Python that validates log entries based o
 - Edge case handling
 - Test-driven development
 
+### Review Task 2: HDFC Data Analysis
+
+Performed comprehensive data analysis on HDFC loan dataset:
+- **Analysis**: Solved 22 specific analytical questions using Pandas.
+- **Data Processing**: Handled JSON data loading and cleaning (`hdfc_loan_dataset_cleaned.json`).
+- **Visualization**: Created Matplotlib plots for insights (e.g., Question 17).
+- **File**: `main.ipynb`
+
+### Review Task 3: Image Classification (ResNet50)
+
+Implemented Transfer Learning for Dog vs Cat classification:
+- **Model**: Used ResNet50 for feature extraction.
+- **Classifiers**:
+  - Support Vector Machine (SVM) (`svm_classifier.ipynb`)
+  - Decision Tree (`decision_tree_classifier.ipynb`)
+- **Dataset**: Microsoft Cats vs Dogs dataset (loaded via Kagglehub).
+- **Process**: Feature extraction, model training, and evaluation.
+
+### Gemini API Integration
+
+- **Sales Agent**: integrated Google Gemini API (model: `gemini-1.5-flash`).
+- **Robustness**: Implemented fallback mechanisms and error handling for API reliability.
+- **Security**: Secured API keys using `.env` and `.gitignore`.
+
 ---
 
 ---
@@ -159,11 +189,26 @@ Implemented advanced backend features:
 
 ## React.js (feature/react_js)
 
-Practicing React.js frontend concepts:
-- Component structure and lifecycle
-- State management
-- Hooks implementation
-- Frontend architecture
+Practicing React.js frontend concepts and building reusable templates:
+
+**Core Concepts & Architecture:**
+- Component structure, Lifecycle methods, and Props drilling
+- Conditional Rendering and List rendering
+- State Management (useState, useReducer)
+- Forms and Events handling
+
+**Advanced Features:**
+- **Hooks**: Deep dive into `useEffect`, `useContext`, `useRef`, `useCallback`, `useMemo`.
+- **HOCs**: Higher-Order Components for logic reuse.
+- **Context API**: Global state management without prop drilling.
+
+**Styling & Build:**
+- Integration with **Bootstrap** and **SCSS** for responsive design.
+- Configuration with **Webpack** and build tools.
+
+**Practice Projects:**
+- Comprehensive code examples for each concept.
+- Created generic reusable components (e.g., Parent-Child communication demos).
 
 ---
 
@@ -193,5 +238,5 @@ Practicing React.js frontend concepts:
 
 ---
 
-**Last Updated:** December 29, 2025  
+**Last Updated:** January 06, 2026  
 **Repository:** arvindpandey4/BridgeLabz-Training-Indexnine
