@@ -1,0 +1,77 @@
+$primary-color: #0d6efd;
+$background-color: #f8f9fa;
+
+body {
+  background-color: $background-color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.practice-container {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.code-block {
+  background: #2d2d2d;
+  color: #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Animations */
+.fade-in-animation {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rotate-on-hover {
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries */
+.responsive-box {
+  background-color: #e2e3e5;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+
+  // Mobile first usually, but here's a desktop override
+  @media (max-width: 768px) {
+    background-color: #ffc107; // Yellow on mobile
+    content: 'Mobile View';
+
+    &::after {
+      content: ' (Mobile)';
+    }
+  }
+
+  @media (min-width: 769px) {
+    background-color: #198754; // Green on Desktop
+    color: white;
+
+    &::after {
+      content: ' (Desktop)';
+    }
+  }
+}
