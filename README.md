@@ -1,9 +1,25 @@
-# Review Task - Log Validation
+# BridgeLabz Training - IndexNine
 
-## Overview
-This project implements a log validation system that checks the validity of log entries based on specific rules.
+This repository contains various AI/ML and programming practice projects completed as part of BridgeLabz training.
 
-## Problem Statement
+## 📁 Project Structure
+
+```
+BridgeLabz_Training_Indexnine/
+│
+├── review_task/              # Log validation system
+├── svm_classifier.ipynb      # Dog/Cat image classification with SVM
+└── genai/                    # GenAI prompt engineering with Gemini
+```
+
+---
+
+## 🔍 1. Review Task - Log Validation
+
+### Overview
+A log validation system that checks the validity of log entries based on specific rules.
+
+### Problem Statement
 Write a function `validate_logs(logs)` where `logs` is a list of strings representing log entries.
 
 ### Rules
@@ -12,45 +28,17 @@ Write a function `validate_logs(logs)` where `logs` is a list of strings represe
 3. No two `ERROR` logs should occur consecutively
 4. Return `True` if all logs are valid, otherwise return `False`
 
-## Files
+### Files
+- **`task.py`**: Main validation function
+- **`logs.py`**: Comprehensive test cases
 
-### `task.py`
-Contains the main `validate_logs()` function that validates log entries according to the rules.
-
-**Function Signature:**
-```python
-def validate_logs(logs: list) -> bool
-```
-
-**Parameters:**
-- `logs` (list): A list of log strings in the format "LEVEL: message"
-
-**Returns:**
-- `bool`: `True` if all logs are valid, `False` otherwise
-
-### `logs.py`
-Contains comprehensive test cases to verify the `validate_logs()` function works correctly.
-
-## Test Cases
-
-The test suite includes 6 different scenarios:
-
-1. **Normal logs** - Mix of INFO, WARNING, and ERROR logs
-2. **Two ERRORs in a row** - Should fail validation
-3. **ERRORs with other logs between them** - Should pass validation
-4. **Invalid log level** - Contains DEBUG (invalid level)
-5. **All INFO logs** - Should pass validation
-6. **Three ERRORs in a row** - Should fail validation
-
-## Usage
-
-Run the test suite:
+### Usage
 ```bash
+cd review_task
 python logs.py
 ```
 
-## Example
-
+### Example
 ```python
 from task import validate_logs
 
@@ -71,16 +59,149 @@ logs = [
 print(validate_logs(logs))  # Output: False
 ```
 
-## Implementation Details
+---
 
-The function validates logs by:
-1. Splitting each log entry by `:` to extract the level
-2. Checking if the level is in the valid levels list
-3. Tracking the previous log level to detect consecutive ERRORs
-4. Returning `False` immediately if any validation rule is violated
+## 🐕🐈 2. SVM Classifier - Dog/Cat Image Classification
 
-## Requirements
-- Python 3.x
+### Overview
+A machine learning project that uses **ResNet50** for feature extraction and **Support Vector Machine (SVM)** for classifying dog and cat images.
 
-## Author
-Arvind Pandey
+### Key Features
+- **Feature Extraction**: Uses pre-trained ResNet50 (ImageNet weights)
+- **Classifier**: Support Vector Machine with RBF kernel
+- **Dataset**: Dog and Cat images from Kaggle
+- **Performance**: High accuracy classification with proper data preprocessing
+
+### Technologies Used
+- TensorFlow/Keras
+- scikit-learn
+- ResNet50 (Transfer Learning)
+- SVM Classifier
+
+### Usage
+```bash
+# Open Jupyter Notebook
+jupyter notebook svm_classifier.ipynb
+```
+
+### Implementation Highlights
+1. **Data Loading**: Loads images from `PetImages/Cat` and `PetImages/Dog` directories
+2. **Preprocessing**: Resizes images, normalizes pixel values
+3. **Feature Extraction**: Uses ResNet50 to extract deep features
+4. **Training**: Trains SVM classifier on extracted features
+5. **Evaluation**: Tests model accuracy on validation set
+
+---
+
+## 🤖 3. GenAI - Prompt Engineering with Gemini
+
+### Overview
+A comprehensive hands-on project exploring Generative AI using **Google's Gemini LLM**. Covers prompting strategies, text generation tasks, and understanding model limitations (hallucinations).
+
+### Key Concepts
+1. **Prompting Techniques**:
+   - Zero-shot prompting
+   - One-shot prompting
+   - Few-shot prompting
+   - Instruction-tuned prompting
+
+2. **Text Generation Tasks**:
+   - **Summarization**: Condensing information
+   - **Inference**: Sentiment analysis, relationship extraction
+   - **Transformation**: Format conversion (Text → JSON), style changes
+   - **Expansion**: Creative writing, reasoning from small ideas
+
+3. **Hallucination Testing**:
+   - Factual errors (inventing facts)
+   - Logical errors (failing logic puzzles)
+   - Confident wrong answers (sycophancy)
+
+### Project Structure
+```
+genai/
+│
+├── prompts/              # Prompting technique documentation
+│   ├── zero_shot.md
+│   ├── one_shot.md
+│   ├── few_shot.md
+│   └── instruction_tuned.md
+│
+├── tasks/                # Runnable scripts for GenAI tasks
+│   ├── summarization.py
+│   ├── inference.py
+│   ├── transformation.py
+│   └── expansion.py
+│
+├── hallucination_tests/  # Model failure demonstrations
+│   ├── factual_errors.py
+│   ├── logical_errors.py
+│   └── confident_wrong.py
+│
+├── utils/                # Helper code and templates
+│   ├── prompt_templates.py
+│   └── response_validator.py
+│
+└── main.py               # Main CLI runner
+```
+
+### Prerequisites
+1. Python 3.9+
+2. Google Gemini API Key from [Google AI Studio](https://aistudio.google.com/)
+3. Install dependencies:
+   ```bash
+   pip install google-generativeai python-dotenv
+   ```
+
+### Setup
+1. Navigate to the genai directory:
+   ```bash
+   cd genai
+   ```
+
+2. Create `.env` file with your API key:
+   ```
+   GEMINI_API_KEY=your_actual_api_key_here
+   ```
+
+### Usage
+```bash
+cd genai
+python main.py
+```
+
+Follow the interactive menu to explore different GenAI concepts.
+
+### Practice Workflow
+1. **Phase 1 - UI Testing**: Test prompts in [Google AI Studio](https://aistudio.google.com/)
+2. **Phase 2 - Code Implementation**: Run Python scripts to understand programmatic implementation
+
+---
+
+## 🛠️ Technologies Used
+
+- **Python 3.x**
+- **TensorFlow/Keras** (Deep Learning)
+- **scikit-learn** (Machine Learning)
+- **Google Generative AI** (Gemini LLM)
+- **Jupyter Notebook** (Interactive development)
+
+---
+
+## 📚 Learning Outcomes
+
+- ✅ Log validation and error handling
+- ✅ Transfer learning with ResNet50
+- ✅ SVM classification for image data
+- ✅ Prompt engineering techniques
+- ✅ Understanding LLM capabilities and limitations
+- ✅ Practical GenAI application development
+
+---
+
+## 👤 Author
+**Arvind Pandey**
+
+---
+
+## 📅 Last Updated
+January 6, 2026
