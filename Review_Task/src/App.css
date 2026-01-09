@@ -1,0 +1,82 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filters input {
+  flex: 1;
+  min-width: 150px;
+}
+
+.filters select {
+  min-width: 150px;
+}
+
+.filters button {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.filters button:hover {
+  background-color: #555;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.product p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.product p:last-child {
+  font-weight: bold;
+  color: #333;
+  font-size: 20px;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #999;
+  padding: 40px;
+}
