@@ -2,6 +2,14 @@
 
 ## Progress Overview
 
+### January 10, 2026
+
+Major updates on AI/ML and React.js fronts:
+- **AI/ML**: Completed IMDB Movie Review Sentiment Analysis. Built a pipeline comparing a custom LSTM model (Student) against Llama-3-70B (Teacher) using Groq API.
+- **React.js**: 
+  - **ChatGPT Interface**: Redesigned the chat application to mimic the ChatGPT UI with sleek minimalist design and avatar-based streaming.
+  - **Drag & Drop**: Migrated Fundoo Notes from `react-beautiful-dnd` to `@dnd-kit` for better performance and modern API support.
+
 ### January 06, 2026
 
 Major updates on AI/ML and Frontend fronts:
@@ -173,6 +181,14 @@ Implemented Transfer Learning for Dog vs Cat classification:
 - **Robustness**: Implemented fallback mechanisms and error handling for API reliability.
 - **Security**: Secured API keys using `.env` and `.gitignore`.
 
+### Review Task 4: IMDB Sentiment Analysis
+
+Implemented a Teacher-Student distillation pipeline for sentiment analysis:
+- **Models**: Comparative study between a lightweight **Bi-LSTM** (Student) and **Llama-3-70B** (Teacher via Groq).
+- **Results**: Achieved ~86% accuracy with LSTM, matching Teacher performance.
+- **Features**: Deep learning preprocessing, Groq API integration, and performance visualization.
+- **File**: `imdb_sentiment_analysis.ipynb`
+
 ---
 
 ---
@@ -238,5 +254,5 @@ Practicing React.js frontend concepts and building reusable templates:
 
 ---
 
-**Last Updated:** January 06, 2026  
+**Last Updated:** January 10, 2026  
 **Repository:** arvindpandey4/BridgeLabz-Training-Indexnine
