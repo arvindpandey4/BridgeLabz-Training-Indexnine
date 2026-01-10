@@ -9,6 +9,7 @@ BridgeLabz_Training_Indexnine/
 │
 ├── review_task/              # Log validation system
 ├── svm_classifier.ipynb      # Dog/Cat image classification with SVM
+├── imdb_sentiment_analysis.ipynb # IMDB Movie Review Sentiment Analysis (LSTM + LLM)
 └── genai/                    # GenAI prompt engineering with Gemini
 ```
 
@@ -93,7 +94,52 @@ jupyter notebook svm_classifier.ipynb
 
 ---
 
-## 🤖 3. GenAI - Prompt Engineering with Gemini
+## 🎬 3. IMDB Analysis - Sentiment Analysis Pipeline
+
+### Overview
+A comprehensive sentiment analysis project comparing a classical Deep Learning approach (**LSTM**) against a modern Large Language Model (**Groq Llama-3 70B**) approach. The project implements a Teacher-Student architecture where the LLM acts as a teacher to validate/label data or serve as a performance benchmark.
+
+### Key Features
+- **Dual Model Architecture**:
+  - **Student Model**: Custom Bidirectional LSTM with Embedding layer
+  - **Teacher Model**: Llama-3.3-70b-versatile via Groq API
+- **Advanced Preprocessing**: Sequence padding, tokenization, and vocabulary management
+- **Performance Comparison**: direct comparison between lightweight LSTM and heavy LLM
+- **Visualization**: Detailed plots for Accuracy, Loss, and Model Comparison
+
+### Technologies Used
+- **TensorFlow/Keras**: For building the LSTM model
+- **Groq API**: For accessing Llama-3.3-70b LLM
+- **NumPy/Pandas**: Data manipulation
+- **Matplotlib**: Performance visualization
+
+### Implementation Highlights
+1. **Data Pipeline**: 
+   - Loads IMDB dataset with 8000 word vocabulary
+   - Splits data: 22,500 train, 2,500 validation, 25,000 test
+2. **LSTM Model**:
+   - Embedding Layer (100 dim)
+   - SpatialDropout1D (0.35)
+   - Bidirectional LSTM (96 units)
+   - GlobalMaxPooling
+3. **LLM Integration**:
+   - Uses zero-shot prompting to classify sentiment
+   - Serves as a "Teacher" baseline (Accuracy ~86%)
+4. **Resutls**: 
+   - Student (LSTM) achieves comparable accuracy (~86.7%) to the Teacher (LLM) but with significantly lower latency and cost.
+
+### Usage
+```bash
+# Install dependencies
+pip install tensorflow groq python-dotenv
+
+# Run Notebook
+jupyter notebook imdb_sentiment_analysis.ipynb
+```
+
+---
+
+## 🤖 4. GenAI - Prompt Engineering with Gemini
 
 ### Overview
 A comprehensive hands-on project exploring Generative AI using **Google's Gemini LLM**. Covers prompting strategies, text generation tasks, and understanding model limitations (hallucinations).
@@ -182,6 +228,7 @@ Follow the interactive menu to explore different GenAI concepts.
 - **Python 3.x**
 - **TensorFlow/Keras** (Deep Learning)
 - **scikit-learn** (Machine Learning)
+- **Groq API** (Llama 3)
 - **Google Generative AI** (Gemini LLM)
 - **Jupyter Notebook** (Interactive development)
 
@@ -192,6 +239,8 @@ Follow the interactive menu to explore different GenAI concepts.
 - ✅ Log validation and error handling
 - ✅ Transfer learning with ResNet50
 - ✅ SVM classification for image data
+- ✅ Teacher-Student Distillation (LLM to LSTM)
+- ✅ Sentiment Analysis with RNN/LSTM
 - ✅ Prompt engineering techniques
 - ✅ Understanding LLM capabilities and limitations
 - ✅ Practical GenAI application development
@@ -204,4 +253,4 @@ Follow the interactive menu to explore different GenAI concepts.
 ---
 
 ## 📅 Last Updated
-January 6, 2026
+January 10, 2026
